@@ -48,6 +48,20 @@
 // updateDimensions();
 // scrollSlides();
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     const navbar = document.querySelector(".desktop-navbar"); // Select the desktop navbar
+//     const mobileNavbar = document.querySelector(".mobile-navbar"); // Select the mobile navbar
+
+//     window.addEventListener("scroll", function () {
+//         if (window.scrollY > 50) {
+//             navbar.classList.add("sticky-navbar");
+//             mobileNavbar.classList.add("sticky-navbar");
+//         } else {
+//             navbar.classList.remove("sticky-navbar");
+//             mobileNavbar.classList.remove("sticky-navbar");
+//         }
+//     });
+// });
 // ----------------------------------------------
 // main home for mobile
 document.addEventListener("DOMContentLoaded", () => {
@@ -103,3 +117,25 @@ image.addEventListener('click', () => {
   youtubeUrl.searchParams.set('autoplay', 1);
   iframe.src = youtubeUrl.toString();
 });
+
+
+// + to -
+// Select all dropdown toggles
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+// Add click event listener to each toggle
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+        const icon = this.querySelector('.toggle-icon');
+        if (icon.classList.contains('bi-plus-circle')) {
+            icon.classList.remove('bi-plus-circle');
+            icon.classList.add('bi-dash-circle');
+        } else {
+            icon.classList.remove('bi-dash-circle');
+            icon.classList.add('bi-plus-circle');
+        }
+    });
+});
+
+
+// filter content for wisdom page

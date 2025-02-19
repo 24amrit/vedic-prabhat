@@ -17,12 +17,12 @@
     <!-- Header -->
     <header class="header">
         <div class="desktop-only">
-            <a href="#"><img src="img/feedback.png" alt="" style="height: 15px;">Feedback</a>
+            <a href="feedback.html"><img src="img/feedback.png" alt="" style="height: 15px;">Feedback</a>
             <a href="#"><img src="img/volunt.png" alt="" style="height: 15px;">Volunteer</a>
             <a href="#"><img src="img/membership.png" alt="" style="height: 15px;">Membership</a>
             <a href="#"><img src="img/shop.png" alt="" style="height: 15px;">Shop</a>
             <a href="vedic-radio.html"><img src="img/radio.png" alt="" style="height: 15px;">Radio</a>
-            <a href="#"><img src="img/wencaste.png" alt="" style="height: 15px;">Webcaste</a>
+            <a href="webcaste.html"><img src="img/wencaste.png" alt="" style="height: 15px;">Webcaste</a>
         </div>
         <!-- <div class="desktop-only">
             
@@ -57,17 +57,17 @@
                     <span class="nav-divider">|</span>
                     <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
                     <span class="nav-divider">|</span>
-                    <li class="nav-item"><a class="nav-link" href="#">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
                     <span class="nav-divider">|</span>
-                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
                     <span class="nav-divider">|</span>
-                    <li class="nav-item"><a class="nav-link" href="#">Center</a></li>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
                 </ul>
 
             </div>
             <!-- Feedback Button and Search -->
             <div class="feed gap-3 mx-3">
-                <a href="#" class="feedback-btn mx-3"><i class="fa-solid fa-hand-holding-heart"></i>Donate</a>
+                <a href="donation.html" class="feedback-btn mx-3"><i class="fa-solid fa-hand-holding-heart"></i>Donate</a>
                 <img src="img/search.png" alt="" style="height: 20px;">
             </div>
             <!-- Flower Image -->
@@ -84,7 +84,7 @@
             <a class="navbar-brand" href="#">
                 <img src="img/vedic-logo.png" alt="Logo" style="max-height: 50px;"> <!-- Replace with your logo -->
             </a>
-            <a href="" class="p-2"
+            <a href="donation.html" class="p-2"
                 style="color:#E4DED4;border: 1px solid #E4DED4; text-decoration: none;border-radius: 15px;">
                 Donate
             </a>
@@ -104,27 +104,27 @@
                     <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
                     <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
                     <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Event</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Center</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
                 </ul>
                 <!-- Feedback Button -->
                 <div class="text-center mt-3">
-                    <a href="#" class="feedback-btn">Feedback</a>
+                    <a href="feedback.html" class="feedback-btn">Feedback</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- home -->
-    <section class="d-flex flex-column container">
-        <div class="wisdom-top d-flex justify-content-center text-white align-items-center mx-4">
+    <section class="d-flex flex-column">
+        <div class="wisdom-top container d-flex justify-content-center text-white align-items-center">
             <h1>Wisdom</h1>
         </div>
     </section>
 
     <!-- filter for wisdom -->
-    <section class=" wisdom-filter-sort container">
+    <section class=" wisdom-filter-sort">
         <div class="wisdom-top-img">
             <img src="img/border2.png" alt="" class="w-100">
         </div>
@@ -135,10 +135,12 @@
                     <div class="btn-group border-bottom border-danger border-2 ">
                         <button class="btn bg-white   btn-sm d-flex gap-5 align-items-center" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            English <i class="fa-solid fa-angle-down"></i>
+                            Language <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="english">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="hindi">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="telgu">Telgu</a></li>
                         </ul>
                     </div>
 
@@ -148,9 +150,9 @@
                             Topics <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="junk">junk</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="yoga">yoga</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="something">Something else here</a></li>
                         </ul>
                     </div>
 
@@ -160,9 +162,9 @@
                             Content type <i class="fa-solid fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="video">video</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="article">article</a></li>
+                            <li><a class="dropdown-item" href="#" data-id="podcast">podcast</a></li>
                         </ul>
                     </div>
                 </div>
@@ -189,6 +191,11 @@
                 </div>
             </div>
         </div>
+        <div class="d-flex py-4">
+            <div class="selected-filters mt-3" style="display: none;"></div>
+            <button class="clear-filters btn btn-sm mt-2" style="display: none;">Clear</button>
+        </div>
+
 
     </section>
 
@@ -196,138 +203,9 @@
     <div class="content-section">
         <section class="py-5">
             <div class="container">
-                <div class="row g-4">
-                    <!-- Column 1 -->
-                    <div class="col-md-6 col-lg-3">
-                        <!-- Card 1 -->
-                        <div class="f-card">
-                            <div style="position: relative;">
-                                <img src="img/fil4.png" class="f-card-img-top" alt="Card Image">
-                                <div class="peach-banner2 p-2">
-                                    <span class="media-type"><i class="bi bi-play-circle"></i></span>
-                                    <span class="media-type">Video</span>
-                                </div>
-                            </div>
-                            <div class="f-card-content">
-                                <h5 class="f-card-title text-center">How Fresh & Junk Foods Affect Your Health | Vedic Prabhat</h5>
-                                <p class="f-card-description text-center">In an event hosted by Global Food Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique insight into</p>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 4 -->
-                        <div class="f-card f-quote-card mt-4">
-                            <div class="f-card-content">
-                                <span class="quote-icon text-center"><i class="fa-solid fa-quote-left fs-1"></i></span>
-                                <h5 class="f-card-title text-center">Sankirtan leads us slowly but surely. The slow march of the sankirtan slowly but steadily takes us back home, back to Godhead.</h5>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column 2 -->
-                    <div class="col-md-6 col-lg-3">
-                        <!-- Card 2 -->
-                        <div class="f-card f-quote-card">
-                            <div class="f-card-content">
-                                <span class="quote-icon text-center"><i class="fa-solid fa-quote-left fs-1"></i></span>
-                                <h5 class="f-card-title text-center">Living an exuberant life is only possible when you are able to dance upon the uncertainties of life.</h5>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="f-card mt-4">
-                            <div style="position: relative;">
-                                <img src="img/fil4.png" class="f-card-img-top" alt="Card Image">
-                                <div class="peach-banner2 p-2">
-                                    <span class="media-type"><i class="bi bi-play-circle"></i></span>
-                                    <span class="media-type">Video</span>
-                                </div>
-                            </div>
-                            <div class="f-card-content">
-                                <h5 class="f-card-title text-center">How Fresh & Junk Foods Affect Your Health | Vedic Prabhat</h5>
-                                <p class="f-card-description text-center">In an event hosted by Global Food Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique insight into</p>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <!-- Column 3 -->
-                    <div class="col-md-6 col-lg-3">
-                        <!-- Card 1 -->
-                        <div class="f-card">
-                            <div style="position: relative;">
-                                <img src="img/fil4.png" class="f-card-img-top" alt="Card Image">
-                                <div class="peach-banner2 p-2">
-                                    <span class="media-type"><i class="bi bi-play-circle"></i></span>
-                                    <span class="media-type">Video</span>
-                                </div>
-                            </div>
-                            <div class="f-card-content">
-                                <h5 class="f-card-title text-center">How Fresh & Junk Foods Affect Your Health | Vedic Prabhat</h5>
-                                <p class="f-card-description text-center">In an event hosted by Global Food Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique insight into</p>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 4 -->
-                        <div class="f-card f-quote-card mt-4">
-                            <div class="f-card-content">
-                                <span class="quote-icon text-center"><i class="fa-solid fa-quote-left fs-1"></i></span>
-                                <h5 class="f-card-title text-center">Sankirtan leads us slowly but surely. The slow march of the sankirtan slowly but steadily takes us back home, back to Godhead.</h5>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column 4 -->
-                    <div class="col-md-6 col-lg-3">
-                        <!-- Card 2 -->
-                        <div class="f-card f-quote-card">
-                            <div class="f-card-content">
-                                <span class="quote-icon text-center"><i class="fa-solid fa-quote-left fs-1"></i></span>
-                                <h5 class="f-card-title text-center">Living an exuberant life is only possible when you are able to dance upon the uncertainties of life.</h5>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="f-card mt-4">
-                            <div style="position: relative;">
-                                <img src="img/fil4.png" class="f-card-img-top" alt="Card Image">
-                                <div class="peach-banner2 p-2">
-                                    <span class="media-type"><i class="bi bi-play-circle"></i></span>
-                                    <span class="media-type">Video</span>
-                                </div>
-                            </div>
-                            <div class="f-card-content">
-                                <h5 class="f-card-title text-center">How Fresh & Junk Foods Affect Your Health | Vedic Prabhat</h5>
-                                <p class="f-card-description text-center">In an event hosted by Global Food Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique insight into</p>
-                                <div class="f-card-footer">
-                                    <span class="date">Jan, 10, 2025</span>
-                                    <span class="share-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <!-- Repeat similar structure for Column 3 and Column 4 -->
+                <div class="row g-4 dom-content">
+                    <!-- dynamic data -->
+
                 </div>
             </div>
             <div class="py-5 text-center">
@@ -495,7 +373,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="wisdom.js"></script>
 </body>
 
 </html>

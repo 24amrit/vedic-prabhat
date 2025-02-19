@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .form-select {
+            border-color: rgb(228, 194, 2);
+        }
+        .form-select option{
+            color: #5D281D;
+        }
+        .form-select option:hover{
+            background-color: #5D281D;
+        }
+
+        .form-select:focus {
+            border-color: rgb(228, 194, 2);
+            box-shadow: 0 0 0 1px rgba(230, 194, 30);
+        }
+    </style>
 </head>
 
 <body>
@@ -67,7 +83,8 @@
             </div>
             <!-- Feedback Button and Search -->
             <div class="feed gap-3 mx-3">
-                <a href="donation.html" class="feedback-btn mx-3"><i class="fa-solid fa-hand-holding-heart"></i>Donate</a>
+                <a href="donation.html" class="feedback-btn mx-3"><i
+                        class="fa-solid fa-hand-holding-heart"></i>Donate</a>
                 <img src="img/search.png" alt="" style="height: 20px;">
             </div>
             <!-- Flower Image -->
@@ -117,109 +134,116 @@
     </nav>
 
     <!-- home -->
-    <!-- <div class="radio-bg container">
-        <section class="vedic-stream d-flex justify-content-center align-items-center flex-wrap gap-5">
-            <div class="col-md-7 col-sm-6 d-flex align-items-center justify-content-center flex-column mt-5">
-                <h1 class="">Vedic Stream Radio</h1>
-                <h4>Streaming Ancient Wisdom</h4>
-            </div>
-            <div class="col-md-2 col-sm-6 d-flex justify-content-center ">
-                <img src="img/krishna-radio.png" alt="" class="img-fluid">
-            </div>
-        </section>
-    </div> -->
     <section class="d-flex flex-column">
-        <div class="radio-top container d-flex justify-content-center text-white align-items-center">
-            <!-- <h1>Wisdom</h1> -->
+        <div class="feedback-top container d-flex justify-content-center text-white align-items-center">
+            <h1>Feedback</h1>
         </div>
     </section>
 
-
-    <div class="radio-bg2">
-        <!-- now playing -->
-        <section class="vedic-discover row justify-content-center align-items-center mx-0 py-5">
-            <div class="col-md-5 d-flex flex-column align-items-center mb-3">
-                <div class="play d-flex flex-column align-items-center">
-                    <button style="border: none; background: none;">
-                        <img src="img/radio-play.png" alt="" class="py-3">
-                    </button>
-                    Now playing
-                </div>
-                <h1>Maharaja Shri Bani</h1>
+    <div class="feedback-bg">
+        <!-- <div class="backbg"></div> -->
+        <section class="contact-envelope">
+            <div class="enl">
+                <img src="img/envelop-logo.png" alt="" style="height: 70px;">
             </div>
-            <div class="col-md-6 mt-3">
-                <h2>Discover Daily Inspiration with Maharaj Shri</h2>
-                <p>Immerse yourself in the wisdom and grace of
-                    Maharaj Shri through a spontaneous selection of
-                    his teachings. From life’s simple joys to profound
-                    spiritual truths, let his timeless insights guide
-                    you toward clarity and peace. Tune in anytime, anywhere, and transform your day with a touch
-                    of divine wisdom</p>
+            <div class="enlw">
+                <div class="line"></div>
             </div>
-        </section>
+            <div class="enlw2">
+                <div class="line2"></div>
+            </div>
+            <div class="wrapper">
+                <div class="lid one"></div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="letter">
+                    <div class="bor-sty">
+                        <form class="pt-3 px-3">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                </div>
+                            </div>
 
-        <!-- schedule -->
-        <section class="vedic-schedul d-flex justify-content-center align-items-center py-3">
-            <div class="p-3">
-                <h2 class="text-center">Schedule (Indian Standard Time)</h2>
-                <div class="vedic-thing p-3">
-                    <p class="text-center bold">WEEKLY PROGRAMS (SAT & SUN)</p>
-                    <p class="d-flex gap-5"><span class="bold">5pm-6pm</span> Ke Falsafe from Akhand Gyan</p>
-                    <p class="d-flex gap-5"> <span class="bold">2am-3am</span>Jeevan Ke Falsafe from Akhand Gyan
-                    </p>
-                    <p class="text-center bold">DAILY PROGRAMS</p>
-                    <p class="d-flex gap-5"><span class="bold">6am-7am</span>Ved Mantra</p>
-                    <p class="d-flex gap-5 "><span class="bold">7am-8am</span>Bhajan Pravah</p>
-                    <p class="d-flex gap-5"><span class="bold">8am-9am</span>Guru Archana & Prerna Pravah</p>
-                    <p class="d-flex gap-5"><span class="bold">9am-12pm</span>Satsang Pravah- Satsang & Bhajans</p>
-                    <p class="d-flex gap-5"><span class="bold">12pm-1pm</span>Katha Pravah-Shrimad Bhagwat Katha
-                    </p>
-                    <p class="d-flex gap-5"><span class="bold">1pm-2pm</span>Prerna Pravah & Bhajan</p>
-                    <p class="d-flex gap-5"><span class="bold">2pm-3pm</span>Prerna Pravah & Bhajan</p>
-                    <p class="d-flex gap-5"><span class="bold">3pm-4pm</span>Katha Pravah-Shriram Katha Amrit</p>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="address" placeholder="Your Address">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="contact"
+                                        placeholder="Your Contact Number">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="city" placeholder="Your City">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="state" placeholder="Your State">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="country" placeholder="Your Country">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="membership"
+                                    placeholder="Membership Details">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="membershipNo"
+                                    placeholder="Membership Number">
+                            </div>
 
-                    <p class="d-flex gap-5"><span class="bold">8am-9am</span>Guru Archana & Prerna Pravah</p>
-                    <p class="d-flex gap-5"><span class="bold">9am-12pm</span>Satsang Pravah- Satsang & Bhajans</p>
-                    <p class="d-flex gap-5"><span class="bold">12pm-1pm</span>Katha Pravah-Shrimad Bhagwat Katha
-                    </p>
-                    <p class="d-flex gap-5"><span class="bold">1pm-2pm</span>Prerna Pravah & Bhajan</p>
-                    <p class="d-flex gap-5"><span class="bold">2pm-3pm</span>Prerna Pravah & Bhajan</p>
-                    <p class="d-flex gap-5"><span class="bold">3pm-4pm</span>Katha Pravah-Shriram Katha Amrit</p>
+                            <div class="recaptcha">
+                                <input type="checkbox" id="recaptcha">
+                                <label for="recaptcha">ADD ME TO MAILING LIST</label>
+                            </div>
+
+                        </form>
+
+                        <form class="pt-3 px-3 low-form">
+                            <div class="form-header mb-3">Your Feedback</div>
+                            <!-- <div class="line mb-3"></div> -->
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+
+                                    <select class="form-select" id="feedbackType">
+                                        <option selected>Others</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="question">Question</option>
+                                        <option value="issue">Issue / Problems</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="subject"
+                                        placeholder="Enter Your Subject...">
+                                </div>
+                                <div class="recaptcha col-md-4">
+                                    <input type="checkbox" id="recaptcha">
+                                    <label for="recaptcha">I'm not a robot</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" placeholder="Your Message..."></textarea>
+                            </div>
+
+                            <div class="text-center mt-4 fom-btn">
+                                <button>
+                                    <h4>Now, I send thanks</h4>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- download app -->
-        <section class="vedic-download d-flex justify-content-center align-items-center flex-column gap-5 py-5">
-            <h1>Download Vedic Prabhat App</h1>
-            <div class="d-flex flex-column align-items-center gap-2">
-                <div class="d-flex justify-content-center py-3 vedic-img">
-                    <img src="img/download-app.png" alt="" class="img-fluid">
-                </div>
-                <div class="download-btn py-3 mt-2">
-                    <a href="#" class="download-link">
-                        <img src="img/d1.png" alt="">
-                        <p>Download</p>
-                    </a>
-                    <a href="#" class="download-link">
-                        <img src="img/d2.png" alt="">
-                        <p>Download</p>
-                    </a>
-                    <a href="#" class="download-link">
-                        <img src="img/d3.png" alt="">
-                        <p>Download</p>
-                    </a>
-                </div>
-            </div>
-            <h4 class="py-5 text-center">Vedic Prabhat welcomes your feedback on its radio service at <a
-                    href="">vedicstreamradio@vedicprabhat.org</a></h4>
         </section>
         <div class="responsive-border3">
             <img src="img/border5-0.png" alt="">
         </div>
-
     </div>
-
     <div class="responsive-border2" style="background-color: #f0c3af;">
         <img src="img/border2.png" alt="">
     </div>
@@ -375,7 +399,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="wisdom.js"></script>
 </body>
 
 </html>

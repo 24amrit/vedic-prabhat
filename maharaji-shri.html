@@ -11,18 +11,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .ms-right {
+            position: relative;
+            left: 80px;
+        }
+
+        .ms-left {
+            position: relative;
+            left: 70px;
+        }
+
+        .contri-photo {
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            right: 220px;
+        }
+
+        .contri-photo p {
+            position: relative;
+            left: 220px;
+            bottom: 170px;
+            font-family: "Berkshire Swash", cursive;
+            color: maroon;
+            text-shadow: 7px 6px #FDF3EF;
+            font-size: 15rem;
+        }
+
+        .contri-photo img {
+            box-shadow: -1px 15px 20px -15px black;
+        }
+
+        @media (max-width: 768px) {
+            .ms-right {
+                left: 0;
+            }
+
+            .ms-left {
+                left: 0;
+            }
+
+            .contri-photo {
+                padding: 30px 0;
+                right: 0;
+            }
+
+            .contri-photo p {
+                left: 62px;
+                bottom: 120px;
+                font-size: 10rem;
+            }
+
+            .contri-photo img {
+                height: 15rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
         <div class="desktop-only">
-            <a href="#"><img src="img/feedback.png" alt="" style="height: 15px;">Feedback</a>
+            <a href="feedback.html"><img src="img/feedback.png" alt="" style="height: 15px;">Feedback</a>
             <a href="#"><img src="img/volunt.png" alt="" style="height: 15px;">Volunteer</a>
             <a href="#"><img src="img/membership.png" alt="" style="height: 15px;">Membership</a>
             <a href="#"><img src="img/shop.png" alt="" style="height: 15px;">Shop</a>
             <a href="vedic-radio.html"><img src="img/radio.png" alt="" style="height: 15px;">Radio</a>
-            <a href="#"><img src="img/wencaste.png" alt="" style="height: 15px;">Webcaste</a>
+            <a href="webcaste.html"><img src="img/wencaste.png" alt="" style="height: 15px;">Webcaste</a>
         </div>
         <!-- <div class="desktop-only">
             
@@ -57,17 +116,18 @@
                     <span class="nav-divider">|</span>
                     <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
                     <span class="nav-divider">|</span>
-                    <li class="nav-item"><a class="nav-link" href="#">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
                     <span class="nav-divider">|</span>
-                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
                     <span class="nav-divider">|</span>
-                    <li class="nav-item"><a class="nav-link" href="#">Center</a></li>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
                 </ul>
 
             </div>
             <!-- Feedback Button and Search -->
             <div class="feed gap-3 mx-3">
-                <a href="#" class="feedback-btn mx-3"><i class="fa-solid fa-hand-holding-heart"></i>Donate</a>
+                <a href="donation.html" class="feedback-btn mx-3"><i
+                        class="fa-solid fa-hand-holding-heart"></i>Donate</a>
                 <img src="img/search.png" alt="" style="height: 20px;">
             </div>
             <!-- Flower Image -->
@@ -84,7 +144,7 @@
             <a class="navbar-brand" href="#">
                 <img src="img/vedic-logo.png" alt="Logo" style="max-height: 50px;"> <!-- Replace with your logo -->
             </a>
-            <a href="" class="p-2"
+            <a href="donation.html" class="p-2"
                 style="color:#E4DED4;border: 1px solid #E4DED4; text-decoration: none;border-radius: 15px;">
                 Donate
             </a>
@@ -104,13 +164,13 @@
                     <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
                     <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
                     <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Event</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Center</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
                 </ul>
                 <!-- Feedback Button -->
                 <div class="text-center mt-3">
-                    <a href="#" class="feedback-btn">Feedback</a>
+                    <a href="feedback.html" class="feedback-btn">Feedback</a>
                 </div>
             </div>
         </div>
@@ -122,7 +182,7 @@
         <section class="maharaj py-5">
             <div class="container">
                 <div class="row align-items-centerjustify-content-center img-fluid">
-                    <div class="col-md-7 custom-text-section mb-3">
+                    <div class="col-md-7 custom-text-section mb-5">
                         <div class="d-flex justify-content-center flex-column">
                             <h1>Maharaj Shri</h1>
                             <!-- <img src="img/underline2.png" alt="Dummy Image" style="width: 15rem;" class="img-fluid"> -->
@@ -138,7 +198,11 @@
                             <i class="fab fa-youtube"></i>
                         </a>
                         <div id="video-container" style="display: none;">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/dXl2NdlmeIE?si=ObV9NrycqgJkYfVf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/dXl2NdlmeIE?si=ObV9NrycqgJkYfVf"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
 
@@ -198,30 +262,87 @@
             <!-- second section -->
             <div class="container-fluid spirit-section text-light">
                 <div class="row align-items-center">
+                    <!-- Left Side: Text Content -->
                     <div class="col-md-6 profound-text-section mb-3">
                         <h2>Maharaj Shri is a visionary spiritual leader and a beacon of profound wisdom.</h2>
-                        <p class="text-black">Maharaj Shri is a revered mystic and spiritual luminary, inspiring
-                            countless individuals with his profound wisdom, transformative teachings, and unwavering
-                            guidance on the path to self-realization.</p>
+                        <p class="text-black">
+                            Maharaj Shri is a revered mystic and spiritual luminary, inspiring countless individuals
+                            with his profound wisdom,
+                            transformative teachings, and unwavering guidance on the path to self-realization.
+                        </p>
                         <a href="#" class="btn profound-btn-primary">View Details <i
                                 class="fa-solid fa-chevron-right"></i></a>
                     </div>
-                    <div class="col-md-5">
-                        <img src="img/pf1.png" alt="Volunteering" class="spirit-img-fluid" style="box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);">
-                    </div>
 
+                    <!-- Right Side: Auto-Sliding Image Slider -->
+                    <div class="col-md-5 ms-right">
+                        <div id="spiritCarousel" class="carousel slide custom-slider" data-bs-ride="carousel"
+                            data-bs-touch="true" style="box-shadow: 0px 18px 18px -16px black;">
+
+                            <!-- Dots (Indicators) -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#spiritCarousel" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#spiritCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#spiritCarousel" data-bs-slide-to="2"></button>
+                            </div>
+
+                            <!-- Slider Images -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/pf1.png" class="d-block w-100 spirit-img-fluid" alt="Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/pf2.png" class="d-block w-100 spirit-img-fluid" alt="Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/pf3.png" class="d-block w-100 spirit-img-fluid" alt="Image 3">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="container-fluid spiritual-section text-light">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="img/pf2.png" alt="Volunteering" class="spiritual-img-fluid" style="box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);">
+                    <!-- Left Side: Auto-Sliding Image Slider -->
+                    <div class="col-md-5 col-12">
+                        <div id="spiritualCarousel" class="carousel slide custom-slider" data-bs-ride="carousel"
+                            data-bs-touch="true" style="box-shadow: 0px 18px 18px -16px black;">
+
+                            <!-- Dots (Indicators) -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#spiritualCarousel" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#spiritualCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#spiritualCarousel" data-bs-slide-to="2"></button>
+                            </div>
+
+                            <!-- Slider Images -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/pf2.png" class="d-block spiritual-img-fluid" alt="Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/pf3.png" class="d-block spiritual-img-fluid" alt="Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/pf1.png" class="d-block spiritual-img-fluid" alt="Image 3">
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="col-md-6 spiritual-text-section">
+
+                    <!-- Right Side: Static Text Content -->
+                    <div class="col-md-6 col-12  ms-left spiritual-text-section">
                         <h2>Maharaj Shri is a revered spiritual guide and a profound teacher.</h2>
-                        <p class="text-black">Maharaj Shri is a revered mystic and spiritual luminary, inspiring
-                            countless individuals with his profound wisdom, transformative teachings, and unwavering
-                            guidance on the path to self-realization.</p>
+                        <p class="text-black">
+                            Maharaj Shri is a revered mystic and spiritual luminary, inspiring countless individuals
+                            with his profound wisdom,
+                            transformative teachings, and unwavering guidance on the path to self-realization.
+                        </p>
                         <a href="#" class="btn profound-btn-primary">View Details <i
                                 class="fa-solid fa-chevron-right"></i></a>
                     </div>
@@ -237,8 +358,33 @@
                         <a href="#" class="btn profound-btn-primary">View Details <i
                                 class="fa-solid fa-chevron-right"></i></a>
                     </div>
-                    <div class="col-md-5">
-                        <img src="img/pf3.png" alt="Volunteering" class="spirit-img-fluid" style="box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);">
+                    <!-- Right Side: Auto-Sliding Image Slider -->
+                    <div class="col-md-5 ms-right">
+                        <div id="spiritCarousel" class="carousel slide custom-slider" data-bs-ride="carousel"
+                            data-bs-touch="true" style="box-shadow: 0px 18px 18px -16px black;">
+
+                            <!-- Dots (Indicators) -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#spiritCarousel" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#spiritCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#spiritCarousel" data-bs-slide-to="2"></button>
+                            </div>
+
+                            <!-- Slider Images -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/pf3.png" class="d-block w-100 spirit-img-fluid" alt="Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/pf1.png" class="d-block w-100 spirit-img-fluid" alt="Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/pf2.png" class="d-block w-100 spirit-img-fluid" alt="Image 3">
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
@@ -287,12 +433,15 @@
                     <div class="carousel-item card-big active">
                         <div class="card-body">
                             <div class="row justify-content-center align-items-center">
-                                <div class="col d-flex justify-content-center">
+                                <div class="contri-photo">
                                     <!-- <div class="number-circle">1</div> -->
-                                    <!-- <div>
-                                        <img src="img/one.png" alt="">
+                                    <!-- <div style="    position: relative;
+                                    left: 45px;
+                                    bottom: 60px;">
+                                        <img src="img/one-one.png" alt="A Guide to Inner Peace" class="rounded">
                                     </div> -->
-                                    <img src="img/contri1.png" alt="A Guide to Inner Peace" class="rounded">
+                                    <p>1</p>
+                                    <img src="img/contri11.png" alt="A Guide to Inner Peace" class="rounded">
                                 </div>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center">
@@ -313,12 +462,15 @@
                     <div class="carousel-item card-big">
                         <div class="card-body">
                             <div class="row justify-content-center align-items-center">
-                                <div class="col d-flex justify-content-center">
-                                    <!-- <div class="number-circle">2</div> -->
-                                    <!-- <div>
-                                        <img src="img/one.png" alt="">
+                                <div class="contri-photo">
+                                    <!-- <div class="number-circle">1</div> -->
+                                    <!-- <div style="    position: relative;
+                                    left: 45px;
+                                    bottom: 60px;">
+                                        <img src="img/one-one.png" alt="A Guide to Inner Peace" class="rounded">
                                     </div> -->
-                                    <img src="img/contri1.png" alt="A Guide to Inner Peace" class="rounded">
+                                    <p>2</p>
+                                    <img src="img/contri11.png" alt="A Guide to Inner Peace" class="rounded">
                                 </div>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center">
@@ -339,12 +491,15 @@
                     <div class="carousel-item card-big">
                         <div class="card-body">
                             <div class="row justify-content-center align-items-center">
-                                <div class="col d-flex justify-content-center">
-                                    <!-- <div class="number-circle">3</div> -->
-                                    <!-- <div class="num-img">
-                                        <img src="img/one.png" alt="">
+                                <div class="contri-photo">
+                                    <!-- <div class="number-circle">1</div> -->
+                                    <!-- <div style="    position: relative;
+                                    left: 45px;
+                                    bottom: 60px;">
+                                        <img src="img/one-one.png" alt="A Guide to Inner Peace" class="rounded">
                                     </div> -->
-                                    <img src="img/contri1.png" alt="A Guide to Inner Peace" class="rounded">
+                                    <p>3</p>
+                                    <img src="img/contri11.png" alt="A Guide to Inner Peace" class="rounded">
                                 </div>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center">
@@ -408,7 +563,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -428,7 +583,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -448,7 +603,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -471,7 +626,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -491,7 +646,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -511,7 +666,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -539,7 +694,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -559,7 +714,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -579,7 +734,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -602,7 +757,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -622,7 +777,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -642,7 +797,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -671,7 +826,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -691,7 +846,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -712,7 +867,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -740,7 +895,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -760,7 +915,7 @@
                                             <div class="white-banner"></div>
                                         </div>
                                         <div class="px-3 mt-3">
-                                            <a href="#" class="art-btn rounded-5">Article</a>
+                                            <a href="#" class="art-btn2 rounded-5">Article</a>
                                             <h5 class="cert-title mt-3">
                                                 The Teachings of Maharaj Shri
                                             </h5>
@@ -778,7 +933,7 @@
                     </div>
 
                     <div class="cert-btn d-flex justify-content-center align-items-center mt-5">
-                        <button class="art-btn px-4">
+                        <button class="art-btn2 px-4" style="background-color: #6F0505;">
                             See All <i class="fa-solid fa-chevron-right ms-3"></i>
                         </button>
                     </div>
@@ -1057,7 +1212,7 @@
         <div class="responsive-border3">
             <img src="img/border5-0.png" alt="">
         </div>
-        
+
     </div>
 
     <div class="responsive-border2" style="background-color: #f0c3af;">

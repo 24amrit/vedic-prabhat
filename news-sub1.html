@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Prabhat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="desktop-only">
+            <a href="feedback.html"><img src="img/feedback.png" alt="" style="height: 15px;">Feedback</a>
+            <a href="#"><img src="img/volunt.png" alt="" style="height: 15px;">Volunteer</a>
+            <a href="#"><img src="img/membership.png" alt="" style="height: 15px;">Membership</a>
+            <a href="#"><img src="img/shop.png" alt="" style="height: 15px;">Shop</a>
+            <a href="vedic-radio.html"><img src="img/radio.png" alt="" style="height: 15px;">Radio</a>
+            <a href="webcaste.html"><img src="img/wencaste.png" alt="" style="height: 15px;">Webcaste</a>
+        </div>
+        <!-- <div class="desktop-only">
+            
+        </div> -->
+        <div class="desktop-only">
+            <div class="login d-flex align-items-center">
+                <img src="img/login.png" alt="" style="height: 15px;">
+                <a href="#">Log in</a>
+                <span>|</span>
+                <a href="#">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom desktop-navbar">
+        <div class="container-fluid">
+            <!-- Flower Image -->
+            <a class="navbar-brand">
+                <img src="img/flower.png" alt="Flower">
+            </a>
+            <!-- Logo -->
+            <a class="navbar-brand mx-3" href="/">
+                <img src="img/vedic-logo.png" alt="Logo">
+            </a>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse mx-5">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
+                </ul>
+
+            </div>
+            <!-- Feedback Button and Search -->
+            <div class="feed gap-3 mx-3">
+                <a href="donation.html" class="feedback-btn mx-3"><i
+                        class="fa-solid fa-hand-holding-heart"></i>Donate</a>
+                <img src="img/search.png" alt="" style="height: 20px;">
+            </div>
+            <!-- Flower Image -->
+            <a class="navbar-brand">
+                <img src="img/flower.png" alt="Flower">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile/Tablet Navbar -->
+    <nav class="navbar navbar-custom mobile-navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="img/vedic-logo.png" alt="Logo" style="max-height: 50px;"> <!-- Replace with your logo -->
+            </a>
+            <a href="donation.html" class="p-2"
+                style="color:#E4DED4;border: 1px solid #E4DED4; text-decoration: none;border-radius: 15px;">
+                Donate
+            </a>
+            <a href=""><img src="img/search.png" alt="" style="height: 20px;"></a>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav"
+                aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
+                </ul>
+                <!-- Feedback Button -->
+                <div class="text-center mt-3">
+                    <a href="feedback.html" class="feedback-btn">Feedback</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home -->
+    <div class="news-detail-body-bg">
+        <div class="news-detail-head-bg">
+            <section class="container py-5 " style="font-family: 'Poppins';">
+                <div>
+                    <h5>All Categories</h5>
+                </div>
+                <div class="row align-items-center gap-3 w-100 news-categories">
+                    <!-- First category -->
+                    <div class="col-md-3 border-bottom border-danger dropdown">
+                        <p class="d-flex justify-content-between align-items-center dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Social Outreach
+                            <i class="bi bi-plus-circle toggle-icon"></i>
+                        </p>
+                        <ul class="dropdown-menu drop-news">
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Second category -->
+                    <div class="col-md-3 border-bottom border-danger dropdown">
+                        <p class="d-flex justify-content-between align-items-center dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Social Outreach
+                            <i class="bi bi-plus-circle toggle-icon"></i>
+                        </p>
+                        <ul class="dropdown-menu drop-news">
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Third category -->
+                    <div class="col-md-3 border-bottom border-danger dropdown">
+                        <p class="d-flex justify-content-between align-items-center dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Social Outreach
+                            <i class="bi bi-plus-circle toggle-icon"></i>
+                        </p>
+                        <ul class="dropdown-menu drop-news">
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                            <li><a class="dropdown-item" href="#">Social Outreach</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Search bar -->
+                    <div
+                        class="col-md-3 d-flex gap-1 align-items-center border border-black border-2 rounded-3 bg-white search-news">
+                        <i class="fa-solid fa-magnifying-glass text-black"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+        <div class="news-detail-bg">
+            <section class="ns-dt-mid-all py-5 px-4">
+                <div class="ns-dt-legacy mb-4">
+                    <h2>The Legacy of Maharaj Shri</h2>
+                    <p>A Beacon of Spiritual Wisdom
+                        Explore Maharaj Shri’s journey as a spiritual luminary and his impact on seekers worldwide.</p>
+                </div>
+        
+                <div class="row dt-date-img-mob">
+                    <div class="col-md-7 dt-date-img">
+                        <div class="d-flex gap-2">
+                            <div class="d-flex gap-1">
+                                <i class="fa-solid fa-calendar-days mt-1"></i>
+                                <p>15/02/25</p>
+                            </div>
+                            <div class="d-flex gap-1">
+                                <i class="fa-solid fa-hashtag mt-1"></i>
+                                <p>spiritual-others</p>
+                            </div>
+                        </div>
+                        <img src="img/eye-testing.png" alt="">
+                    </div>
+        
+                    <div class="col-md-5 d-flex flex-column dt-btn-para">
+                        
+                        <a href="" class="align-self-end me-1 mb-3 text-white rounded-2 py-2 px-4">Read in Hindi</a>
+                        <p>To emphasize eternal values of surrender, faith, and resilience in
+                            navigating life’s challenges as exemplified by Shri Ram Bhakt
+                            ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a mesmerizing
+                            theatrical play titled ‘अंति म परी क्षा ’on 24th January 2025 as part of
+                            the Natyotsava-theatrical exclusive at Mahakumbh, Prayagraj (Uttar Pradesh). This grand event was an
+                            integral part of the ‘Divya Jyoti
+                            Chalchitram Series 2’, conceptualized under the spiritual guidance of ‘His Holiness Ashutosh Maharaj
+                            Ji’. The play featured exceptional
+                            performances by self-less volunteers of DJJS, who captured the
+                            emotional and spiritual nuances of the saga with great depth. The
+                            event brought together hundreds of devotees and seekers fromacross the globe, uniting them in a
+                            shared experience of divine
+                            inspiration.</p>
+                    </div>
+                </div>
+        
+                <div class="dt-para py-5">
+                    <p class="">To emphasize eternal values of surrender, faith, and resilience in navigating life’s challenges as
+                        exemplified by Shri Ram Bhakt ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a mesmerizing
+                        theatrical play titled ‘अंति म परी क्षा ’on 24th January 2025 as part of the Natyotsava-theatrical
+                        exclusive at Mahakumbh, Prayagraj (Uttar Pradesh). This grand event was an integral part of the ‘Divya
+                        Jyoti Chalchitram Series 2’, conceptualized under the spiritual guidance of ‘His Holiness Ashutosh
+                        Maharaj Ji’. The play
+                        featured exceptional performances by self-less volunteers of DJJS, who captured the emotional and
+                        spiritual nuances of the saga with great depth. The event brought
+                        together hundreds of devotees and seekers from across the globe, uniting them in a shared experience of
+                        divine inspiration.</p>
+                </div>
+        
+                <div class="row dt-date-img-mob">
+                    <div class="col-md-7 dt-date-img">
+                        <img src="img/para-img.png" alt="">
+                    </div>
+        
+                    <div class="col-md-5 d-flex align-items-center dt-btn-para">
+                        <p>To emphasize eternal values of surrender, faith, and resilience in
+                            navigating life’s challenges as exemplified by Shri Ram Bhakt
+                            ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a mesmerizing
+                            theatrical play titled ‘अंति म परी क्षा ’on 24th January 2025 as part of
+                            the Natyotsava-theatrical exclusive at Mahakumbh, Prayagraj (Uttar Pradesh). This grand event was an
+                            integral part of the ‘Divya Jyoti
+                            Chalchitram Series 2’, conceptualized under the spiritual guidance of ‘His Holiness Ashutosh Maharaj
+                            Ji’. The play featured exceptional
+                            performances by self-less volunteers of DJJS, who captured the
+                            emotional and spiritual nuances of the saga with great depth. The
+                            event brought together hundreds of devotees and seekers fromacross the globe, uniting them in a
+                            shared experience of divine
+                            inspiration.</p>
+                    </div>
+                </div>
+        
+                <div class="dt-para py-5">
+                    <p class="">To emphasize eternal values of surrender, faith, and resilience in navigating life’s challenges as
+                        exemplified by Shri Ram Bhakt ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a mesmerizing
+                        theatrical play titled ‘अंति म परी क्षा ’on 24th January 2025 as part of the Natyotsava-theatrical
+                        exclusive at Mahakumbh, Prayagraj (Uttar Pradesh). This grand event was an integral part of the ‘Divya
+                        Jyoti Chalchitram Series 2’, conceptualized under the spiritual guidance of ‘His Holiness Ashutosh
+                        Maharaj Ji’. The play
+                        featured exceptional performances by self-less volunteers of DJJS, who captured the emotional and
+                        spiritual nuances of the saga with great depth. The event brought
+                        together hundreds of devotees and seekers from across the globe, uniting them in a shared experience of
+                        divine inspiration.</p>
+                </div>
+    
+                <div class="bg-white d-flex py-5 align-items-center gap-4 ns-dt-about">
+                    <div class="d-flex align-items-center ns-dt-logo">
+                        <img src="img/vedic-logo.png" alt="">
+                    </div>
+                    <div class="ns-dt-ab-content">
+                        <h4>About Maharaja Shri</h4>
+                        <p class="text-center">To emphasize eternal values of surrender, faith, and resilience</p>
+                        <a href="" class="text-white rounded-2 py-1 px-2">Know more</a>
+                    </div>
+                </div>
+            </section>
+    
+    
+    
+            <section class="container py-5 news-other">
+                <div class="container d-flex justify-content-between">
+                    <h1>Related News</h1>
+                    <!-- <h4 class="">See all</h4> -->
+                </div>
+                <h4 class="text-end" style="position: relative; right: 65px;">See all</h4>
+    
+                <div class=" d-flex flex-column align-items-center">
+                    <div class=" row d-flex justify-content-center align-items-center container mt-5">
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="card news-social-outreach-card" style="width: 30rem;">
+                                <img src="img/fil2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Teachings of Maharaj Shri</h5>
+                                    <p class="card-text">A Beacon of Spiritual Wisdom
+                                        Explore Maharaj Shri’s journey as a spiritual
+                                        luminary and his impact on seekers worldwide</p>
+                                    <p class="text-secondary news-date">01/13/2025</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="card news-social-outreach-card" style="width: 30rem;">
+                                <img src="img/fil3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Maharaj Shri’s Vision of
+                                        Transcendence</h5>
+                                    <p class="card-text">A Beacon of Spiritual Wisdom
+                                        Explore Maharaj Shri’s journey as a spiritual
+                                        luminary and his impact on seekers worldwide</p>
+                                    <p class="text-secondary news-date">01/13/2025</p>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="card news-social-outreach-card" style="width: 30rem;">
+                                <img src="img/fil2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Teachings of Maharaj Shri</h5>
+                                    <p class="card-text">A Beacon of Spiritual Wisdom
+                                        Explore Maharaj Shri’s journey as a spiritual
+                                        luminary and his impact on seekers worldwide</p>
+                                    <p class="text-secondary news-date">01/13/2025</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="card news-social-outreach-card" style="width: 30rem;">
+                                <img src="img/fil3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Maharaj Shri’s Vision of
+                                        Transcendence</h5>
+                                    <p class="card-text">A Beacon of Spiritual Wisdom
+                                        Explore Maharaj Shri’s journey as a spiritual
+                                        luminary and his impact on seekers worldwide</p>
+                                    <p class="text-secondary news-date">01/13/2025</p>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="responsive-border3">
+                <img src="img/border5-0.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="responsive-border2" style="background-color: #f0c3af;">
+        <img src="img/border2.png" alt="">
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer-section py-3">
+        <div class="container text-light">
+            <div class="row foot-row">
+                <!-- First Column -->
+                <div class="col-md-2 foo1">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>Maharaj Shri</li>
+                        <li>Outreach</li>
+                        <li>Wisdom</li>
+                        <li>Event</li>
+                        <li>News</li>
+                        <li>Center</li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2 foo2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>E-publication</li>
+                        <li>Upcoming Events</li>
+                        <li>Vedic Touch</li>
+                        <li>Kumbh</li>
+                        <li>Ram</li>
+                        <li>Krushna</li>
+                    </ul>
+                </div>
+                <!-- Decorative Image -->
+                <!-- <div class="col-md-1 text-center">
+                    <img src="img/decorative-footer.png" alt="Decorative Image" class="foot-img-fluid-1"
+                        style="max-height: 300px; position: relative; right: 45px;">
+                </div> -->
+                <div class="d-flex foot-flower">
+                    <img src="img/decorative-footer.png" alt="Decorative Image" class="foot-img-fluid-1">
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4 middle1">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4 middle2">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox
+                        for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4 Download">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4 Download2">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row foot-row2">
+                <!-- First Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>Maharaj Shri</li>
+                        <li>Outreach</li>
+                        <li>Wisdom</li>
+                        <li>Event</li>
+                        <li>News</li>
+                        <li>Center</li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>E-publication</li>
+                        <li>Upcoming Events</li>
+                        <li>Vedic Touch</li>
+                        <li>Kumbh</li>
+                        <li>Ram</li>
+                        <li>Krushna</li>
+                    </ul>
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox
+                        for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row mt-5 text-center">
+                <div class="col-12 mt-3 foot-b">
+                    <p>&copy; 2010–2024 The Vedic Prabhat Foundation. All Right Reserved. | <a href="#">Terms &
+                            Conditions</a> | <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="whiteline"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

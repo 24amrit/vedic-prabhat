@@ -1,0 +1,39 @@
+        <section class="container d-flex justify-content-center align-items-center webcast-head">
+            <div class="d-flex align-items-center flex-column mt-5">
+                <h1>Webcast</h1>
+                <img src="img/underline2.png" alt="">
+                <p class="text-center">Maharajashri has created a number of consecrated
+                    forms and spaces to catalyze one’s spiritual evolution, and ensure human beings attain to their
+                    fullest
+                    potential.</p>
+            </div>
+        </section>
+
+        <section class="container d-flex align-items-center flex-column py-5 web-utube-sec">
+            <div class="maha col-md-5 px-4">
+                <a target="_blank">
+                    <img src="img/maha.png" alt="Volunteering" class="img-fluid rounded">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <div id="video-container" style="display: none;">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/dXl2NdlmeIE?si=ObV9NrycqgJkYfVf"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="d-flex gap-2 text-white">
+                <p>LIVE</p>
+                <p>|</p>
+                <p>Vedic Prabhat</p>
+                <p>|</p>
+                <p>Srimad Narayan Bani</p>
+                <p>|</p>
+                <p>2025</p>
+            </div>
+
+            <div class="web-utube-btn  mt-5">
+                <a href="https://www.youtube.com/embed/dXl2NdlmeIE?si=ObV9NrycqgJkYfVf" class="text-white rounded-5 py-2 px-5 gap-1">Watch On Youtube <img src="" alt=""></a>
+            </div>
+        </section>

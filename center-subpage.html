@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Prabhat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Popup container */
+        .popup-container {
+            position: fixed;
+            top: 70px;
+            left: 260px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        /* Schedule container */
+        .schedule-container {
+            background-color: #FCE5D2;
+            border: 2px solid #D09C83;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+        }
+
+        /* Title */
+        .schedule-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Table Layout */
+        .schedule-table {
+            display: flex;
+            gap: 10px;
+            /* Space between columns */
+        }
+
+        /* Columns */
+        .column {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Box */
+        .header {
+            font-weight: bold;
+            background: white;
+        }
+
+        /* All Boxes */
+        .box {
+            padding: 10px;
+            border: 1px solid black;
+            background: #fff;
+            text-align: center;
+            height: 65px;
+        }
+
+        /* Close button */
+        .close-btn {
+            background-color: #5A2B18;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .close-btn:hover {
+            background-color: #3E1D11;
+        }
+
+        /* Hide popup initially */
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .popup-container {
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+
+            .schedule-title {
+                font-size: 16px;
+            }
+
+            .box {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="desktop-only">
+            <a href="feedback.html"><img src="img/feedback.png" alt="" style="height: 15px;">Feedback</a>
+            <a href="#"><img src="img/volunt.png" alt="" style="height: 15px;">Volunteer</a>
+            <a href="#"><img src="img/membership.png" alt="" style="height: 15px;">Membership</a>
+            <a href="#"><img src="img/shop.png" alt="" style="height: 15px;">Shop</a>
+            <a href="vedic-radio.html"><img src="img/radio.png" alt="" style="height: 15px;">Radio</a>
+            <a href="webcaste.html"><img src="img/wencaste.png" alt="" style="height: 15px;">Webcaste</a>
+        </div>
+        <!-- <div class="desktop-only">
+            
+        </div> -->
+        <div class="desktop-only">
+            <div class="login d-flex align-items-center">
+                <img src="img/login.png" alt="" style="height: 15px;">
+                <a href="#">Log in</a>
+                <span>|</span>
+                <a href="#">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom desktop-navbar">
+        <div class="container-fluid">
+            <!-- Flower Image -->
+            <a class="navbar-brand">
+                <img src="img/flower.png" alt="Flower">
+            </a>
+            <!-- Logo -->
+            <a class="navbar-brand mx-3" href="/">
+                <img src="img/vedic-logo.png" alt="Logo">
+            </a>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse mx-5">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
+                </ul>
+
+            </div>
+            <!-- Feedback Button and Search -->
+            <div class="feed gap-3 mx-3">
+                <a href="donation.html" class="feedback-btn mx-3"><i
+                        class="fa-solid fa-hand-holding-heart"></i>Donate</a>
+                <li class="d-flex align-items-center navbar-nav">
+                    <img src="img/program-finder.png" alt="" style="height: 35px;">
+                    <a class="nav-link" href="#">Program <br> Finder</a>
+                </li>
+                <img src="img/search.png" alt="" style="height: 20px;">
+            </div>
+            <!-- Flower Image -->
+            <a class="navbar-brand">
+                <img src="img/flower.png" alt="Flower">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile/Tablet Navbar -->
+    <nav class="navbar navbar-custom mobile-navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="img/vedic-logo.png" alt="Logo" style="max-height: 50px;"> <!-- Replace with your logo -->
+            </a>
+            <a href="donation.html" class="p-2"
+                style="color:#E4DED4;border: 1px solid #E4DED4; text-decoration: none;border-radius: 15px;">
+                Donate
+            </a>
+            <a href=""><img src="img/search.png" alt="" style="height: 20px;"></a>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav"
+                aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
+                </ul>
+                <!-- Feedback Button -->
+                <div class="text-center mt-3">
+                    <a href="#" class="feedback-btn">Feedback</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Popup Container -->
+    <div class="popup-container" id="popup">
+        <div class="schedule-container">
+            <div class="schedule-title">Weekly Discourses Schedule</div>
+
+            <div class="schedule-table">
+                <!-- Timing Column -->
+                <div class="column">
+                    <div class="box header">Timing</div>
+                    <div class="box">1st Sunday, 8:30am to 10:30am</div>
+                    <div class="box">1st Sunday, 8:30am to 10:30am</div>
+                    <div class="box">1st Sunday, 8:30am to 10:30am</div>
+                    <div class="box">1st Sunday, 8:30am to 10:30am</div>
+                    <div class="box">1st Sunday, 8:30am to 10:30am</div>
+                    <div class="box">1st Sunday, 8:30am to 10:30am</div>
+                </div>
+
+                <!-- Address Column -->
+                <div class="column">
+                    <div class="box header">Address</div>
+                    <div class="box">Green park, Shiv Mandir, Near Ever Green Sweet Shop</div>
+                    <div class="box">Green park, Shiv Mandir, Near Ever Green Sweet Shop</div>
+                    <div class="box">Green park, Shiv Mandir, Near Ever Green Sweet Shop</div>
+                    <div class="box">Green park, Shiv Mandir, Near Ever Green Sweet Shop</div>
+                    <div class="box">Green park, Shiv Mandir, Near Ever Green Sweet Shop</div>
+                    <div class="box">Green park, Shiv Mandir, Near Ever Green Sweet Shop</div>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button class="close-btn" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- home -->
+    <div class="center-uttar-body">
+        <section class="mahashivratri-head row align-items-center">
+            <div class="col-md-5 mahashiv-head-content">
+                <h1 style="font-weight: 500;">Vedic prabhat
+                    centre, Utarpradesh</h1>
+
+                <p style="font-size: 15px;">Its unique energy, structure, and location make the Isha Yoga Center a
+                    tremendously powerful space
+                    for selftransformation. – Maharaja shri</p>
+            </div>
+            <div class="col-md-7 mahashiv-head-img">
+                <div class="slant"></div>
+                <img src="img/center-uttar-head.png" alt="Maha Shivratri Celebration">
+            </div>
+        </section>
+
+        <section class="media-interviews d-flex py-5">
+            <section class="center-ut-nav">
+                <div class="media-interviews-navbar d-flex flex-column nav nav-tabs media-interviews-nav-tabs px-1 pt-1"
+                    id="tabMenu" role="tablist">
+
+                    <div class="d-flex align-items-start flex-column">
+
+                        <button class="nav-link media-interviews-nav-link  active" id="australia-tab"
+                            data-bs-toggle="tab" data-bs-target="#australia" type="button" role="tab"
+                            aria-controls="australia" aria-selected="true">Overview</button>
+
+                        <button class="nav-link media-interviews-nav-link" id="greece-tab" data-bs-toggle="tab"
+                            data-bs-target="#greece" type="button" role="tab" aria-controls="greece"
+                            aria-selected="false">How To Get There</button>
+
+                        <!-- <button class="nav-link media-interviews-nav-link" id="italy-tab" data-bs-toggle="tab"
+                        data-bs-target="#italy" type="button" role="tab" aria-controls="italy"
+                        aria-selected="false">Visitors Information</button> -->
+                        <button class="nav-link media-interviews-nav-link" id="visitor-tab" data-bs-toggle="tab"
+                            data-bs-target="#visitor" type="button" role="tab" aria-controls="visitor"
+                            aria-selected="true">Visitors Information</button>
+
+                        <button class="nav-link media-interviews-nav-link" id="kingdom-tab" data-bs-toggle="tab"
+                            data-bs-target="#kingdom" type="button" role="tab" aria-controls="kingdom"
+                            aria-selected="false">Accommodation</button>
+                        <button class="nav-link media-interviews-nav-link" id="spaces-tab" data-bs-toggle="tab"
+                            data-bs-target="#spaces" type="button" role="tab" aria-controls="spaces"
+                            aria-selected="false">Consecrated Spaces</button>
+                        <button class="nav-link media-interviews-nav-link" id="programs-tab" data-bs-toggle="tab"
+                            data-bs-target="#programs" type="button" role="tab" aria-controls="programs"
+                            aria-selected="false">Upcoming Programs</button>
+                        <button class="nav-link media-interviews-nav-link" id="upcoming-tab" data-bs-toggle="tab"
+                            data-bs-target="#upcoming" type="button" role="tab" aria-controls="upcoming"
+                            aria-selected="false">Upcoming Events</button>
+                        <button class="nav-link media-interviews-nav-link" id="tour-tab" data-bs-toggle="tab"
+                            data-bs-target="#tour" type="button" role="tab" aria-controls="tour"
+                            aria-selected="false">Virtual Tour</button>
+                        <button class="nav-link media-interviews-nav-link" id="volunteer-tab" data-bs-toggle="tab"
+                            data-bs-target="#volunteer" type="button" role="tab" aria-controls="volunteer"
+                            aria-selected="false">Volunteer</button>
+                        <button class="nav-link media-interviews-nav-link" id="visitors-tab" data-bs-toggle="tab"
+                            data-bs-target="#visitors" type="button" role="tab" aria-controls="visitors"
+                            aria-selected="false">Overseas Visitors</button>
+                        <button class="nav-link media-interviews-nav-link" id="contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                            aria-selected="false">Contact Us</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="media-content flex-column gap-5">
+
+                <div class="tab-content" id="tabContent">
+                    <div class="tab-pane fade show active" id="australia" role="tabpanel"
+                        aria-labelledby="australia-tab">
+
+
+
+                        <section class="center-overview d-flex align-items-center flex-column  gap-3">
+                            <img src="img/flower-top.png" alt="">
+                            <p>To emphasize eternal values of surrender, faith, and resilience in navigating life’s
+                                challenges as
+                                exemplified by Shri RamBhakt ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a
+                                mesmerizing theatrical
+                                play titled ‘अंति म परी क्षा ’on 24th January
+                                2025 as part of the Natyotsava-theatrical exclusive at Mahakumbh, Prayagraj (Uttar
+                                Pradesh). This grand
+                                event was an
+                                integral part of the ‘Divya Jyoti Chalchitram Series 2’, conceptualized under the
+                                spiritual guidance of
+                                ‘His Holiness Ashutosh
+                                Maharaj Ji’. The play featured exceptional performances by self-less volunteers of DJJS,
+                                who captured
+                                the emotional andspiritual nuances of the saga with great depth. The event brought
+                                together hundreds of
+                                devotees and seekers from across
+                                the globe, uniting them in a shared experience of divine inspiration.</p>
+                            <p>To emphasize eternal values of surrender, faith, and resilience in navigating life’s
+                                challenges as
+                                exemplified by Shri RamBhakt ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a
+                                mesmerizing theatrical
+                                play titled ‘अंति म परी क्षा ’on 24th January
+                                2025 as part of the Natyotsava-theatrical exclusive at Mahakumbh, Prayagraj (Uttar
+                                Pradesh). This grand
+                                event was an
+                                integral part of the ‘Divya Jyoti Chalchitram Series 2’, conceptualized under the
+                                spiritual guidance of
+                                ‘His Holiness Ashutosh
+                                Maharaj Ji’. The play featured exceptional performances by self-less volunteers of DJJS,
+                                who captured
+                                the emotional andspiritual nuances of the saga with great depth. The event brought
+                                together hundreds of
+                                devotees and seekers from across
+                                the globe, uniting them in a shared experience of divine inspiration</p>
+                            <div class="big-img-mob">
+                                <img src="img/pushpanjali.png" alt="">
+                            </div>
+
+                        </section>
+                        <section class="get-there d-flex align-items-center flex-column py-5">
+                            <div class="get-there-head d-flex align-items-center flex-column">
+                                <h1>How To Get There</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <p>To emphasize eternal values of surrender, faith, and resilience in navigating life’s
+                                challenges as
+                                exemplified by Shri RamBhakt ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a
+                                mesmerizing theatrical
+                                play titled ‘अंति म परी क्षा ’on 24th January
+                                2025 as part of the Natyotsava-theatrical exclusive at Mahakumbh, Prayagraj (Uttar
+                                Pradesh). This grand
+                                event was an
+                                integral part of the ‘Divya Jyoti Chalchitram Series 2’, conceptualized under the
+                                spiritual guidance of
+                                ‘His Holiness Ashutosh
+                                Maharaj Ji’. The play featured exceptional performances by self-less volunteers of DJJS,
+                                who captured
+                                the emotional andspiritual nuances of the saga with great depth. The event brought
+                                together hundreds of
+                                devotees and seekers from across
+                                the globe, uniting them in a shared experience of divine inspiration.
+                            </p>
+                            <div class="map-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14372.932067247251!2d84.1483292747544!3d25.762865882325926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399264e135c22d0b%3A0x96518566d0d15475!2sHead%20Post%20Office%20Ballia!5e0!3m2!1sen!2sin!4v1742475418261!5m2!1sen!2sin"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <img src="" alt="">
+                        </section>
+                        <section class="center-visitor d-flex align-items-center flex-column py-5">
+                            <div class="center-visitor-head d-flex align-items-center flex-column">
+                                <h1>Visitors Information</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <p class="visi-para px-5 py-2">Vedic Prabhat premises are open from 6:00 am to 8:00 pm</p>
+
+                        </section>
+                        <section class="center-accom d-flex flex-column py-5">
+                            <div class="center-accom-head d-flex align-items-center flex-column">
+                                <h1>Accommodation</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="center-accom-para">
+                                <p>Exuding a serene ambience, the accommodation at the Isha Yoga Center welcomes you
+                                    into a relaxing space
+                                    that blends
+                                    rich, earth-tone hues within a simple yet elegant setting. A distinctive interior
+                                    design and Isha's own
+                                    furniture line underscorethe rustic and cozy feel of the guest units, all while
+                                    offering world-class
+                                    facilities.</p>
+                            </div>
+
+                            <section class="center-accom-card d-flex justify-content-between">
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/bedroom.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Cottages</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Book Now
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Volunteer Accommodation</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Enquiry Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </section>
+                        <section class="center-spaces d-flex  flex-column py-5">
+                            <div class="center-spaces-head d-flex align-items-center flex-column">
+                                <h1>Consecrated Spaces</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="center-spaces-para">
+                                <p class="text-center">Maharajashri has created a number of consecrated forms and spaces
+                                    to catalyze one’s
+                                    spiritual evolution, and ensure human beings attain to their fullest potential.</p>
+                            </div>
+                            <section class="center-accom-card d-flex justify-content-between px-5 py-2">
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/bedroom.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Cottages</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Book Now
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Volunteer Accommodation</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Enquiry Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="center-accom-card d-flex justify-content-between px-5 py-2">
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/bedroom.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Cottages</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Book Now
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Volunteer Accommodation</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Enquiry Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <section class="center-up-pg d-flex align-items-center flex-column py-5">
+                            <div class="center-up-pg-head d-flex align-items-center flex-column">
+                                <h1>Upcoming Programs</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="row cent-up-pg-card">
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cent-up-pg-card">
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cent-up-pg-card">
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 cent-up-pg-card-mob">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5">
+                                <a href="" class="load-btn px-5 py-2 rounded-3 text-white">Load More</a>
+                            </div>
+                        </section>
+                        <section class="center-upcom-eve d-flex align-items-center flex-column py-5">
+                            <div class="center-upcom-eve-head d-flex align-items-center flex-column">
+                                <h1>Upcoming Event</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="big-img-mob">
+                                <img src="img/center-mahashiv.png" alt="" class="big-img-mob">
+                            </div>
+                        </section>
+                        <section class="virtual-tour d-flex align-items-center flex-column py-5">
+                            <div class="virtual-tour-head d-flex align-items-center flex-column">
+                                <h1>Virtual Tour</h1>
+                                <img src="img/underline.png" alt="">
+                                <div class="map-container2">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!4v1742536482198!6m8!1m7!1sW5xBuA3PVCbFUTYycbkDPA!2m2!1d25.76319617358885!2d84.1488534590676!3f197.40038!4f0!5f0.7820865974627469"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="center-uttar-volunteer d-flex align-items-center flex-column py-5">
+                            <div class="center-uttar-volunteer-head d-flex align-items-center flex-column">
+                                <h1>Be A Volunteer</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <section class="d-flex align-items-center flex-column gap-5">
+                                <div class="center-accom-card-2 d-flex">
+
+                                    <div class="main-center-card mb-3">
+                                        <div style="position: relative;">
+                                            <div class="poly-banner"></div>
+                                            <img src="img/go-seva.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="poly-banner2"></div>
+                                        </div>
+                                        <div class="card-body mt-3">
+                                            <h5 class="card-title py-2">Go Seva</h5>
+                                            <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                                Regulators Summit in July 2023, Vedic Prabhat offered a profound and
+                                                unique
+                                                insight into</p>
+                                            <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                                Learn More
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="main-center-card mb-3 ">
+                                        <div style="position: relative;">
+                                            <div class="poly-banner"></div>
+                                            <img src="img/anatha-seva.png" class="card-img-top"
+                                                alt="Yoga and Meditation">
+                                            <div class="poly-banner2"></div>
+                                        </div>
+                                        <div class="card-body mt-3">
+                                            <h5 class="card-title py-2">Anatha Seva</h5>
+                                            <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                                Regulators Summit in July 2023, Vedic Prabhat offered a profound and
+                                                unique
+                                                insight into</p>
+                                            <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                                Learn More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <section class="overseas-visitors d-flex align-items-center flex-column py-5">
+                            <div class="overseas-visitors-head d-flex align-items-center flex-column">
+                                <h1>Overseas Visitors</h1>
+                                <p>(For Non-Indian Passport Holders / NRIs)</p>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="container overseas-visitors-cont d-flex flex-column">
+                                <h6>Planning your visit to the ashram?</h6>
+                                <p>First step is to register and create a visit request on <a href="">Overseas Online
+                                        Portal</a></p>
+                                <p>Make sure to have your recent passport size photo, passport and
+                                    visa (if obtained) handy when registering.</p>
+                                <p>To help you plan your visit, check out our <a href="">Visitor's Guide</a> which
+                                    includes information on: </p>
+                                <ul>
+                                    <li>What to Pack</li>
+                                    <li>Travel Tips,</li>
+                                    <li>A Day at Isha Yoga Center</li>
+                                    <li>FAQs, and more!</li>
+                                </ul>
+                                <p>We look forward to welcoming you soon!</p>
+                            </div>
+                        </section>
+                        <section class="center-uttar-contact d-flex align-items-center flex-column py-5">
+                            <div class="center-uttar-contact-head d-flex align-items-center flex-column">
+                                <h1>Contact Us</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="container center-uttar-contact-cont d-flex flex-column">
+                                <h6>Contact Information:</h6>
+                                <h6>Vedic Prabhat centre</h6>
+                                <p>NAYA CHOWK, JAPLINGANJ, BALLIA</p>
+                                <p><span>Utar Pradesh- </span> INDIA, 277001</p>
+                                <p><span>Telephone:</span>07394007096</p>
+                                <p><span>Email:</span><a href="">Info@vedicprabhat.org</a></p>
+                            </div>
+                        </section>
+                        <section class="center-uttar-testi d-flex align-items-center flex-column py-5">
+                            <div class="center-uttar-testi-head d-flex align-items-center flex-column">
+                                <h1>Testimonials</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <p class="text-center">I am just amazed how energetic and lively I feel when I
+                                            visit the space. It has a different energy
+                                            that has to be experienced. Most beautiful heavenly place. One should at
+                                            least once visit here in
+                                            lifetime. Full of grace. Offers yoga tools for human transformation. One of
+                                            the most authentic yoga
+                                            schools in world. - Vedic Prabhat</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <p class="text-center">I am just amazed how energetic and lively I feel when I
+                                            visit the space. It has a different energy
+                                            that has to be experienced. Most beautiful heavenly place. One should at
+                                            least once visit here in
+                                            lifetime. Full of grace. Offers yoga tools for human transformation. One of
+                                            the most authentic yoga
+                                            schools in world. - Vedic Prabhat</p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <p class="text-center">I am just amazed how energetic and lively I feel when I
+                                            visit the space. It has a different energy
+                                            that has to be experienced. Most beautiful heavenly place. One should at
+                                            least once visit here in
+                                            lifetime. Full of grace. Offers yoga tools for human transformation. One of
+                                            the most authentic yoga
+                                            schools in world. - Vedic Prabhat</p>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev prv" type="button"
+                                    data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <span class="carousel-control-prev" aria-hidden="true"><i
+                                            class="bi bi-chevron-left"></i></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next nxt" type="button"
+                                    data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <span class="carousel-control-next" aria-hidden="true"><i
+                                            class="bi bi-chevron-right"></i></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade " id="greece" role="tabpanel" aria-labelledby="greece-tab">
+
+                        <section class="get-there d-flex justify-content-center flex-column">
+                            <div class="get-there-head d-flex align-items-center flex-column">
+                                <h1>How To Get There</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <p>To emphasize eternal values of surrender, faith, and resilience in navigating life’s
+                                challenges as
+                                exemplified by Shri RamBhakt ‘Bharat’, ‘Divya Jyoti Jagrati Sansthan’ organized a
+                                mesmerizing theatrical
+                                play titled ‘अंति म परी क्षा ’on 24th January
+                                2025 as part of the Natyotsava-theatrical exclusive at Mahakumbh, Prayagraj (Uttar
+                                Pradesh). This grand
+                                event was an
+                                integral part of the ‘Divya Jyoti Chalchitram Series 2’, conceptualized under the
+                                spiritual guidance of
+                                ‘His Holiness Ashutosh
+                                Maharaj Ji’. The play featured exceptional performances by self-less volunteers of DJJS,
+                                who captured
+                                the emotional andspiritual nuances of the saga with great depth. The event brought
+                                together hundreds of
+                                devotees and seekers from across
+                                the globe, uniting them in a shared experience of divine inspiration.
+                            </p>
+                            <div class="map-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14372.932067247251!2d84.1483292747544!3d25.762865882325926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399264e135c22d0b%3A0x96518566d0d15475!2sHead%20Post%20Office%20Ballia!5e0!3m2!1sen!2sin!4v1742475418261!5m2!1sen!2sin"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div class="tab-pane fade " id="visitor" role="tabpanel" aria-labelledby="visitor-tab">
+
+                        <section class="center-visitor visi-pad d-flex align-items-center flex-column">
+                            <div class="center-visitor-head d-flex align-items-center flex-column">
+                                <h1>Visitors Information</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <p class="visi-para px-5 py-2">Vedic Prabhat premises are open from 6:00 am to 8:00 pm</p>
+
+                        </section>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="kingdom" role="tabpanel" aria-labelledby="kingdom-tab">
+
+                        <section class="center-accom d-flex align-items-center flex-column">
+                            <div class="center-accom-head d-flex align-items-center flex-column">
+                                <h1>Accommodation</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="center-accom-para">
+                                <p>Exuding a serene ambience, the accommodation at the Isha Yoga Center welcomes you
+                                    into a relaxing space
+                                    that blends
+                                    rich, earth-tone hues within a simple yet elegant setting. A distinctive interior
+                                    design and Isha's own
+                                    furniture line underscorethe rustic and cozy feel of the guest units, all while
+                                    offering world-class
+                                    facilities.</p>
+                            </div>
+
+                            <section class="center-accom-card accom-card-tab d-flex justify-content-between">
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/bedroom.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Cottages</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Book Now
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Volunteer Accommodation</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Enquiry Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </section>
+
+
+                    </div>
+
+                    <div class="tab-pane fade" id="spaces" role="tabpanel" aria-labelledby="spaces-tab">
+                        <section class="center-spaces d-flex align-items-center flex-column">
+                            <div class="center-spaces-head d-flex align-items-center flex-column">
+                                <h1>Consecrated Spaces</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="center-spaces-para">
+                                <p class="text-center">Maharajashri has created a number of consecrated forms and spaces
+                                    to catalyze one’s
+                                    spiritual evolution, and ensure human beings attain to their fullest potential.</p>
+                            </div>
+                            <section class="center-accom-card accom-card-tab d-flex justify-content-between px-5 py-2">
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/bedroom.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Cottages</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Book Now
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Volunteer Accommodation</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Enquiry Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="center-accom-card accom-card-tab d-flex justify-content-between px-5 py-2">
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/bedroom.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Cottages</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Book Now
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="main-center-card mb-3">
+                                    <div style="position: relative;">
+                                        <div class="poly-banner"></div>
+                                        <img src="img/pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                        <div class="poly-banner2"></div>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="card-title py-2">Volunteer Accommodation</h5>
+                                        <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                            Regulators Summit in July 2023, Vedic Prabhat offered a profound and unique
+                                            insight into</p>
+                                        <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                            Enquiry Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                    </div>
+
+
+                    <div class="tab-pane fade" id="programs" role="tabpanel" aria-labelledby="programs-tab">
+
+                        <section class="center-up-pg up-pg-pad d-flex align-items-center flex-column">
+                            <div class="center-up-pg-head d-flex align-items-center flex-column">
+                                <h1>Upcoming Programs</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="our-center-card my-3  gap-1">
+                                        <div style="position: relative;">
+                                            <img src="img/up-pg.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="meroon-banner pt-4">
+                                                <h6>NAYA CHOWK, JAPLINGANJ, BALLIA, INDIA 277001</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ms-2 py-2 d-flex flex-column gap-2">
+                                            <p>01 March 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5">
+                                <a href="" class="load-btn px-5 py-2 rounded-3 text-white">Load More</a>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade" id="upcoming" role="tabpanel" aria-labelledby="upcoming-tab">
+                        <section class="center-upcom-eve upcom-eve-pad d-flex align-items-center flex-column ">
+                            <div class="center-upcom-eve-head d-flex align-items-center flex-column">
+                                <h1>Upcoming Event</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="big-img-mob">
+                                <img src="img/center-mahashiv.png" alt="" class="big-img-mob">
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade " id="tour" role="tabpanel" aria-labelledby="tour-tab">
+                        <section class="virtual-tour tour-pad d-flex align-items-center flex-column ">
+                            <div class="virtual-tour-head d-flex align-items-center flex-column">
+                                <h1>Virtual Tour</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="map-container2">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!4v1742536482198!6m8!1m7!1sW5xBuA3PVCbFUTYycbkDPA!2m2!1d25.76319617358885!2d84.1488534590676!3f197.40038!4f0!5f0.7820865974627469"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade " id="volunteer" role="tabpanel" aria-labelledby="volunteer-tab">
+                        <section class="volunteer volunteer-pad d-flex align-items-center flex-column">
+                            <div class="volunteer-head d-flex align-items-center flex-column">
+                                <h1>Be A Volunteer</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <section class="d-flex align-items-center flex-column gap-5">
+                                <div class="center-accom-card-2 d-flex">
+                                    <div class="main-center-card mb-3">
+                                        <div style="position: relative;">
+                                            <div class="poly-banner"></div>
+                                            <img src="img/go-seva.png" class="card-img-top" alt="Yoga and Meditation">
+                                            <div class="poly-banner2"></div>
+                                        </div>
+                                        <div class="card-body mt-3">
+                                            <h5 class="card-title py-2">Go Seva</h5>
+                                            <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                                Regulators Summit in July 2023, Vedic Prabhat offered a profound and
+                                                unique
+                                                insight into</p>
+                                            <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                                Learn More
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="main-center-card mb-3 ">
+                                        <div style="position: relative;">
+                                            <div class="poly-banner"></div>
+                                            <img src="img/anatha-seva.png" class="card-img-top"
+                                                alt="Yoga and Meditation">
+                                            <div class="poly-banner2"></div>
+                                        </div>
+                                        <div class="card-body mt-3">
+                                            <h5 class="card-title py-2">Anatha Seva</h5>
+                                            <p class="card-text py-2 text-secondary">In an event hosted by Global Food
+                                                Regulators Summit in July 2023, Vedic Prabhat offered a profound and
+                                                unique
+                                                insight into</p>
+                                            <a href="#" class="book-btn px-4 py-1 rounded-5">
+                                                Learn More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade " id="visitors" role="tabpanel" aria-labelledby="visitors-tab">
+
+                        <section class="overseas-visitors ov-visi-pad d-flex align-items-center flex-column">
+                            <div class="overseas-visitors-head d-flex align-items-center flex-column">
+                                <h1>Overseas Visitors</h1>
+                                <p>(For Non-Indian Passport Holders / NRIs)</p>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="overseas-visitors-cont container d-flex flex-column">
+                                <h6>Planning your visit to the ashram?</h6>
+                                <p>First step is to register and create a visit request on <a href="">Overseas Online
+                                        Portal</a></p>
+                                <p>Make sure to have your recent passport size photo, passport and
+                                    visa (if obtained) handy when registering.</p>
+                                <p>To help you plan your visit, check out our <a href="">Visitor's Guide</a> which
+                                    includes information on: </p>
+                                <ul>
+                                    <li>What to Pack</li>
+                                    <li>Travel Tips,</li>
+                                    <li>A Day at Isha Yoga Center</li>
+                                    <li>FAQs, and more!</li>
+                                </ul>
+                                <p>We look forward to welcoming you soon!</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade " id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <section class="center-uttar-contact contact-pad d-flex align-items-center flex-column">
+                            <div class="center-uttar-contact-head d-flex align-items-center flex-column">
+                                <h1>Contact Us</h1>
+                                <img src="img/underline.png" alt="">
+                            </div>
+                            <div class="center-uttar-contact-cont d-flex flex-column">
+                                <h6>Contact Information:</h6>
+                                <h6>Vedic Prabhat centre</h6>
+                                <p>NAYA CHOWK, JAPLINGANJ, BALLIA</p>
+                                <p><span>Utar Pradesh- </span> INDIA, 277001</p>
+                                <p><span>Telephone:</span>07394007096</p>
+                                <p><span>Email:</span><a href=""> Info@vedicprabhat.org</a></p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <div class="responsive-border2" style="background-color: #f0c3af;">
+        <img src="img/border2.png" alt="">
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer-section py-3">
+        <div class="container text-light">
+            <div class="row foot-row">
+                <!-- First Column -->
+                <div class="col-md-2 foo1">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>Maharaj Shri</li>
+                        <li>Outreach</li>
+                        <li>Wisdom</li>
+                        <li>Event</li>
+                        <li>News</li>
+                        <li>Center</li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2 foo2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>E-publication</li>
+                        <li>Upcoming Events</li>
+                        <li>Vedic Touch</li>
+                        <li>Kumbh</li>
+                        <li>Ram</li>
+                        <li>Krushna</li>
+                    </ul>
+                </div>
+                <!-- Decorative Image -->
+                <!-- <div class="col-md-1 text-center">
+                    <img src="img/decorative-footer.png" alt="Decorative Image" class="foot-img-fluid-1"
+                        style="max-height: 300px; position: relative; right: 45px;">
+                </div> -->
+                <div class="d-flex foot-flower">
+                    <img src="img/decorative-footer.png" alt="Decorative Image" class="foot-img-fluid-1">
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4 middle1">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4 middle2">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox
+                        for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4 Download">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4 Download2">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row foot-row2">
+                <!-- First Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>Maharaj Shri</li>
+                        <li>Outreach</li>
+                        <li>Wisdom</li>
+                        <li>Event</li>
+                        <li>News</li>
+                        <li>Center</li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>E-publication</li>
+                        <li>Upcoming Events</li>
+                        <li>Vedic Touch</li>
+                        <li>Kumbh</li>
+                        <li>Ram</li>
+                        <li>Krushna</li>
+                    </ul>
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox
+                        for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row mt-5 text-center">
+                <div class="col-12 mt-3 foot-b">
+                    <p>&copy; 2010–2024 The Vedic Prabhat Foundation. All Right Reserved. | <a href="#">Terms &
+                            Conditions</a> | <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="whiteline"></div>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("popup").classList.add("hidden");
+        }
+
+    </script>
+</body>
+
+</html>

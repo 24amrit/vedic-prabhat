@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Prabhat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .mr2-bg {
+            padding-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .mr2 {
+                height: 23rem;
+            }
+
+            .arrow-btn i {
+                font-size: 20px;
+            }
+
+            .slider-image p {
+                width: 99%;
+            }
+
+            .mr2-bg {
+                padding-top: 120px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="desktop-only">
+            <a href="feedback.html"><img src="img/feedback.png" alt="" style="height: 15px;">Feedback</a>
+            <a href="#"><img src="img/volunt.png" alt="" style="height: 15px;">Volunteer</a>
+            <a href="#"><img src="img/membership.png" alt="" style="height: 15px;">Membership</a>
+            <a href="#"><img src="img/shop.png" alt="" style="height: 15px;">Shop</a>
+            <a href="vedic-radio.html"><img src="img/radio.png" alt="" style="height: 15px;">Radio</a>
+            <a href="webcaste.html"><img src="img/wencaste.png" alt="" style="height: 15px;">Webcaste</a>
+        </div>
+        <!-- <div class="desktop-only">
+            
+        </div> -->
+        <div class="desktop-only">
+            <div class="login d-flex align-items-center">
+                <img src="img/login.png" alt="" style="height: 15px;">
+                <a href="#">Log in</a>
+                <span>|</span>
+                <a href="#">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom desktop-navbar">
+        <div class="container-fluid">
+            <!-- Flower Image -->
+            <a class="navbar-brand">
+                <img src="img/flower.png" alt="Flower">
+            </a>
+            <!-- Logo -->
+            <a class="navbar-brand mx-3" href="/">
+                <img src="img/vedic-logo.png" alt="Logo">
+            </a>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse mx-5">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <span class="nav-divider">|</span>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
+                </ul>
+
+            </div>
+            <!-- Feedback Button and Search -->
+            <div class="feed gap-3 mx-3">
+                <a href="donation.html" class="feedback-btn mx-3"><i
+                        class="fa-solid fa-hand-holding-heart"></i>Donate</a>
+                <li class="d-flex align-items-center navbar-nav">
+                    <img src="img/program-finder.png" alt="" style="height: 35px;">
+                    <a class="nav-link" href="#">Program <br> Finder</a>
+                </li>
+                <img src="img/search.png" alt="" style="height: 20px;">
+            </div>
+            <!-- Flower Image -->
+            <a class="navbar-brand">
+                <img src="img/flower.png" alt="Flower">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile/Tablet Navbar -->
+    <nav class="navbar navbar-custom mobile-navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="img/vedic-logo.png" alt="Logo" style="max-height: 50px;"> <!-- Replace with your logo -->
+            </a>
+            <a href="donation.html" class="p-2"
+                style="color:#E4DED4;border: 1px solid #E4DED4; text-decoration: none;border-radius: 15px;">
+                Donate
+            </a>
+            <a href=""><img src="img/search.png" alt="" style="height: 20px;"></a>
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav"
+                aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="maharaji-shri.html">Maharaj Shri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="outreach.html">Outreach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wisdom.html">Wisdom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="center.html">Center</a></li>
+                </ul>
+                <!-- Feedback Button -->
+                <div class="text-center mt-3">
+                    <a href="feedback.html" class="feedback-btn">Feedback</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home -->
+    <div class="mr2">
+        <section class="maharaj py-5">
+            <div class="container">
+                <div class="subpage-design">
+                    <div class="col-md-6">
+                        <div class="slider-container container">
+                            <div class="slider-header">
+                                <a href="wisdom-subpage.html" class="arrow-btn left-btn"><i class="bi bi-chevron-left"></i></a>
+                                <h1 class="slider-title"><span>13</span> february</h1>
+                                <a href="wisdom-subpage2.html" class="arrow-btn right-btn"><i class="bi bi-chevron-right"></i></a>
+                            </div>
+                            <div class="slider-image mt-3">
+                                <img src="img/ms1.png" alt="Event Image">
+                                <p class="my-3">If you are a little playful with life, every moment is a celebration.
+                                </p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="img/maha-sign2.png" class="w-25" alt="">
+                                    <img src="img/underline.png" class="w-25" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="mr2-bg">
+        <div class="container pt-3">
+            <!-- Top Section -->
+            <div class="top-section">
+                <p>Daily Quote <br> February 13, 2025</p>
+                <div class="vertical-line"></div>
+                <div class="social-icons-sub">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Lotus Divider -->
+            <div class="lotus-divider">
+                <img src="img/lotus.png" alt="Lotus">
+                <img src="img/lotus.png" alt="Lotus">
+                <img src="img/lotus.png" alt="Lotus">
+                <img src="img/lotus.png" alt="Lotus">
+                <img src="img/lotus.png" alt="Lotus">
+                <img src="img/lotus.png" alt="Lotus">
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-container2">
+                <h2 class="text-center">Receive quote every day in your inbox.</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label for="name">Your Name*</label>
+                            <input type="text" class="form-control" placeholder="Your full name">
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="email">Email*</label>
+                            <input type="email" class="form-control" placeholder="xyz@gmail.com">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 my-2">
+                            <label for="phone">Contact Phone Number*</label>
+                            <input type="text" class="form-control" placeholder="Your Contact Number">
+                        </div>
+                        <div class="col-md-6 my-2">
+                            <label for="country">Country*</label>
+                            <select class="form-control">
+                                <option selected>Your Country <i class="bi bi-chevron-down"></i></option>
+                                <option>USA</option>
+                                <option>India</option>
+                                <option>UK</option>
+                                <option>Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- reCAPTCHA -->
+                    <div class="my-3 text-center">
+                        <input type="checkbox"> I'm not a robot
+                    </div>
+                    <!-- Signup Button -->
+                    <div class="text-center">
+                        <button class="signup-btn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="responsive-border2" style="background-color: #f0c3af;">
+        <img src="img/border2.png" alt="">
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer-section py-3">
+        <div class="container text-light">
+            <div class="row foot-row">
+                <!-- First Column -->
+                <div class="col-md-2 foo1">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>Maharaj Shri</li>
+                        <li>Outreach</li>
+                        <li>Wisdom</li>
+                        <li>Event</li>
+                        <li>News</li>
+                        <li>Center</li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2 foo2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>E-publication</li>
+                        <li>Upcoming Events</li>
+                        <li>Vedic Touch</li>
+                        <li>Kumbh</li>
+                        <li>Ram</li>
+                        <li>Krushna</li>
+                    </ul>
+                </div>
+                <!-- Decorative Image -->
+                <!-- <div class="col-md-1 text-center">
+                    <img src="img/decorative-footer.png" alt="Decorative Image" class="foot-img-fluid-1"
+                        style="max-height: 300px; position: relative; right: 45px;">
+                </div> -->
+                <div class="d-flex foot-flower">
+                    <img src="img/decorative-footer.png" alt="Decorative Image" class="foot-img-fluid-1">
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4 middle1">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4 middle2">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox
+                        for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4 Download">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4 Download2">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row foot-row2">
+                <!-- First Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>Maharaj Shri</li>
+                        <li>Outreach</li>
+                        <li>Wisdom</li>
+                        <li>Event</li>
+                        <li>News</li>
+                        <li>Center</li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li>E-publication</li>
+                        <li>Upcoming Events</li>
+                        <li>Vedic Touch</li>
+                        <li>Kumbh</li>
+                        <li>Ram</li>
+                        <li>Krushna</li>
+                    </ul>
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox
+                        for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row mt-5 text-center">
+                <div class="col-12 mt-3 foot-b">
+                    <p>&copy; 2010–2024 The Vedic Prabhat Foundation. All Right Reserved. | <a href="#">Terms &
+                            Conditions</a> | <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="whiteline"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

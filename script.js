@@ -105,9 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const image = document.querySelector('.maha img');
 const videoContainer = document.getElementById('video-container');
 const iframe = videoContainer.querySelector('iframe');
-const youtubeIcon = document.querySelector('.maha a i'); // Select the YouTube icon
+const youtubeIcon = document.querySelector('.maha i'); // Select the YouTube icon
+const videoTrigger = document.querySelector('.maha a'); // Select the entire anchor tag
 
-image.addEventListener('click', () => {
+videoTrigger.addEventListener('click', () => {
   videoContainer.style.display = 'block'; // Show the video container
   image.style.display = 'none'; // Hide the image
   youtubeIcon.style.opacity = '0'; // Hide the YouTube icon

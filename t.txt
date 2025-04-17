@@ -37,3 +37,192 @@
                 <a href="https://www.youtube.com/embed/dXl2NdlmeIE?si=ObV9NrycqgJkYfVf" class="text-white rounded-5 py-2 px-5 gap-1">Watch On Youtube <img src="" alt=""></a>
             </div>
         </section>
+
+
+
+        volunter and contribution sectio (index.html)
+
+        <section class="container volunteering mt-3">
+            <div class="container-fluid volunteer-section text-light">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="img/volunter.png" alt="Volunteering" class="volunt-img-fluid">
+                    </div>
+                    <div class="col-md-7 volunt-text-section">
+                        <h1>Your Contribution</h1>
+                        <h3>is a way of giving back</h3>
+                        <p>The Jagannath Temple, located in Puri, Odisha, is one of the most revered Hindu temples in
+                            India.
+                            Dedicated to Lord Jagannath, a form of Lord Vishnu, it is part of the Char Dham pilgrimage
+                            sites.</p>
+                        <a href="#" class="btn volunt-btn-primary">Donate now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- second section -->
+            <div class="container-fluid contribution-section text-light">
+                <div class="row">
+                    <div class="col-md-7 volunt-text-section2 mb-3 text-end" style="right: 10px; padding: 0 5px;">
+                        <h1>Volunteering</h1>
+                        <h3>is a way of giving back</h3>
+                        <p>The Jagannath Temple, located in Puri, Odisha, is one of the most revered Hindu temples in
+                            India.
+                            Dedicated to Lord Jagannath, a form of Lord Vishnu, it is part of the Char Dham pilgrimage
+                            sites.</p>
+                        <a href="#" class="btn volunt-btn-primary">Volunteer now</a>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="img/contribution.svg" alt="Volunteering" class="volunt-img-fluid">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        old footer
+        <footer class="footer-section py-3">
+        <div class="container text-light">
+            <div class="row foot-row">
+                <!-- First Column -->
+                <div class="col-md-2 foo1">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a class="foota" href="">About Vedic Prabhat</a></li>
+                        <li><a class="foota" href="">My Account</a></li>
+                        <li><a class="foota" href="">E-Publication</a></li>
+                        <li><a class="foota" href="">Media & Press Releases</a></li>
+                        <li><a class="foota" href="">Upcoming Events</a></li>
+                        <li><a class="foota" href="">Vedic Stream Radio</a></li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2 foo2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a class="foota" href="">Vedic Touch</a></li>
+                        <li><a class="foota" href="">Ashrams</a></li>
+                        <li><a class="foota" href="">Temple</a></li>
+                        <li><a class="foota" href="">Meditation</a></li>
+                        <li><a class="foota" href="">Kumbh</a></li>
+                        <li><a class="foota" href="">Kartik Kalpavaas</a></li>
+                    </ul>
+                </div>
+                <!-- Decorative Image -->
+                <!-- <div class="col-md-1 text-center">
+                    <img src="img/decorative-footer.png" alt="Decorative Image" class="foot-img-fluid-1"
+                        style="max-height: 300px; position: relative; right: 45px;">
+                </div> -->
+                <div class="d-flex foot-flower">
+                    <img src="img/decorative-footer.svg" alt="Decorative Image" class="foot-img-fluid-1">
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4 middle1">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4 middle2">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4 Download">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4 Download2">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row foot-row2">
+                <!-- First Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a class="foota" href="">About Vedic Prabhat</a></li>
+                        <li><a class="foota" href="">My Account</a></li>
+                        <li><a class="foota" href="">E-Publication</a></li>
+                        <li><a class="foota" href="">Media & Press Releases</a></li>
+                        <li><a class="foota" href="">Upcoming Events</a></li>
+                        <li><a class="foota" href="">Vedic Stream Radio</a></li>
+                    </ul>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-2">
+                    <h5 class="mb-3 d-block"></h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a class="foota" href="">Vedic Touch</a></li>
+                        <li><a class="foota" href="">Ashrams</a></li>
+                        <li><a class="foota" href="">Temple</a></li>
+                        <li><a class="foota" href="">Meditation</a></li>
+                        <li><a class="foota" href="">Kumbh</a></li>
+                        <li><a class="foota" href="">Kartik Kalpavaas</a></li>
+                    </ul>
+                </div>
+                <!-- third Column -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Contact Us</h5>
+                    <p class="mb-1">
+                        <i class="bi bi-geo-alt-fill"></i> India, Naya Chowk, Japlinganj, Balliya, Post 277001
+                    </p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill"></i> +91 7394007096</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@vedicprabhat.org</p>
+                </div>
+                <!-- 4th Column - Subscribe -->
+                <div class="col-md-2 py-4">
+                    <h5 class="mb-3 footer-title">Subscribe</h5>
+                    <img src="img/subscribe.png" alt="Subscribe Image" class="foot-img-fluid mb-2">
+                    <p>Join 1.2 Million people from around the world, get wisdom articles delivered in the mailbox for
+                        free.</p>
+                    <button class="btn foot-btn-warning btn-sm mb-3">Subscribe Now</button>
+                </div>
+                <!-- 5th Column - Download App -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Download App</h5>
+                    <img src="img/footer-img.png" alt="">
+                    <div class="mb-2">
+                        <a href="#"><img src="img/playstore.png" alt="Google Play" class="appimage"></a>
+                        <a href="#"><img src="img/appstore.png" alt="App Store" class="appimage"></a>
+                    </div>
+                </div>
+                <!-- 6th Column - Contact Us -->
+                <div class="col-md-2 py-4">
+                    <h5 class="footer-title mb-3">Find Us On Social Media</h5>
+                    <div class="social-icons px-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row mt-5 text-center">
+                <div class="col-12 mt-3 foot-b">
+                    <p>&copy; 2010–2024 The Vedic Prabhat Foundation. All Right Reserved. | <a href="#">Terms &
+                            Conditions</a> | <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>

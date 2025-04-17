@@ -11,22 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .form-select {
-            border-color: rgb(228, 194, 2);
-        }
-        .form-select option{
-            color: #5D281D;
-        }
-        .form-select option:hover{
-            background-color: #5D281D;
-        }
-
-        .form-select:focus {
-            border-color: rgb(228, 194, 2);
-            box-shadow: 0 0 0 1px rgba(230, 194, 30);
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="feedback.css"> -->
 </head>
 
 <body>
@@ -138,112 +123,114 @@
     </nav>
 
     <!-- home -->
-    <section class="d-flex flex-column">
+    <!-- <section class="d-flex flex-column">
         <div class="feedback-top container d-flex justify-content-center text-white align-items-center">
             <h1>Feedback</h1>
         </div>
-    </section>
+    </section> -->
 
     <div class="feedback-bg">
         <!-- <div class="backbg"></div> -->
-        <section class="contact-envelope">
-            <div class="enl">
-                <img src="img/envelop-logo.png" alt="" style="height: 70px;">
-            </div>
-            <div class="enlw">
-                <div class="line"></div>
-            </div>
-            <div class="enlw2">
-                <div class="line2"></div>
-            </div>
-            <div class="wrapper">
-                <div class="lid one"></div>
-                <div class="lid two"></div>
-                <div class="envelope"></div>
-                <div class="letter">
-                    <div class="bor-sty">
-                        <form class="pt-3 px-3">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+        <div class="feedback-top container d-flex justify-content-center text-white align-items-center">
+            <h1>Feedback</h1>
+        </div>
+        <div class="fb-bg2">
+            <div id="wrap">
+                <!-- <h1>&nbsp;Contact Us</h1> -->
+                <div id='form_wrap'>
+                    <form class="env-form" name="form1" method="post" id="form1">
+
+                        <div class="form-con">
+                            <div class="form-row">
+                                <input type="text" id="txtname" placeholder="Name *" required>
+                                <input type="text" id="email" placeholder="Email Address *" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="txtaddress" placeholder="Address for Communication *" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="txtcontactno" placeholder="Contact Number *" required>
+                                <input type="text" id="txtcity" placeholder="City *" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="txtstate" placeholder="State *" required>
+                                <input type="text" id="txtcountry" placeholder="Country *" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="membership" placeholder="Member Of Vedic Prabhat....." required>
+                            </div>
+                            <div class="form-row">
+                                <select name="ddlref" id="ref" class="ddll"style=";height:22px; width:100%;">
+                                    <option selected="selected" value="- * How do you know about us? * -">- * How do you know about us? * -</option>
+                                    <option value="Member of Vikasatarangini">Member of Vikasatarangini</option>
+                                    <option value="Came through internet search">Came through internet search</option>
+                                    <option value="Referred by a friend to visit website">Referred by a friend to visit website</option>
+                                    <option value="Parent of kids studying at our schools">Parent of kids studying at our schools</option>
+                                    <option value="Regular visitor to our ashrams or temples">Regular visitor to our ashrams or temples</option>
+                                    <option value="Beneficiary of services rendered by the organization">Beneficiary of services rendered by the organization</option>
+                                    <option value="Looking for some information">Looking for some information</option>
+                                    <option value="Others">Others</option>
+                                
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <span style="color:White;" class="add-me">
+                                    <input id="chksubscribe" type="checkbox" name="chksubscribe" checked="checked">
+                                    <label for="chksubscribe">Add me to the mailing list</label>
+                                </span>
+                                <div id="otherInputRow" style="display:none;">
+                                    <input type="text" name="otherInfo" id="otherInfo" placeholder="Enter you Reference *" style="width:100%; height:22px;" />
                                 </div>
                             </div>
 
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="address" placeholder="Your Address">
+                            <div class="yr-feed">
+                                <h3>Your Feedback</h3>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" id="contact"
-                                        placeholder="Your Contact Number">
+                            <hr>
+
+                            <div class="form-row">
+                                <select name="ddlsubject" id="ddlsubject" class="ddll"
+                                    style="background-color:#F8F5F1;height:22px;width:180px;">
+                                    <option value="--Select Subject--">--Select Subject--</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Questions">Questions</option>
+                                    <option value="Issues/Problems">Issues/Problems</option>
+                                    <option value="Others">Others</option>
+                                </select>
+
+                                <div>
+                                    <input name="txtsubject" type="text" id="txtsubject"
+                                        placeholder="Enter Your Subject..." style="display: none;">
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" id="city" placeholder="Your City">
+
+                                <div class="rectcaptcha">
+                                    <div class="cck">
+                                        <input type="checkbox" id="captcha">
+                                        <label for="captcha">I'm not a robot</label>
+                                    </div>
+                                    <div>
+                                        <img src="img/recaptcha-logo-scalable-vector-graphics-portable-network-graphics-png-favpng-AmW9QdM2QzbsTwDLG2wHpCeRc-removebg-preview.png"
+                                            alt="Captcha">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" id="state" placeholder="Your State">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" id="country" placeholder="Your Country">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="membership"
-                                    placeholder="Membership Details">
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="membershipNo"
-                                    placeholder="Membership Number">
                             </div>
 
-                            <div class="recaptcha">
-                                <input type="checkbox" id="recaptcha">
-                                <label for="recaptcha">ADD ME TO MAILING LIST</label>
+                            <div style="width: 100%;">
+                                <textarea class="txt-env" name="txtfeedback" rows="5" id="txtfeedback" required
+                                    style="width: 100%; box-sizing: border-box;"
+                                    placeholder="Your Message........"></textarea>
                             </div>
 
-                        </form>
-
-                        <form class="pt-3 px-3 low-form">
-                            <div class="form-header mb-3">Your Feedback</div>
-                            <!-- <div class="line mb-3"></div> -->
-                            <div class="row mb-3">
-                                <div class="col-md-4">
-
-                                    <select class="form-select" id="feedbackType">
-                                        <option selected>Others</option>
-                                        <option value="feedback">Feedback</option>
-                                        <option value="question">Question</option>
-                                        <option value="issue">Issue / Problems</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" id="subject"
-                                        placeholder="Enter Your Subject...">
-                                </div>
-                                <div class="recaptcha col-md-4">
-                                    <input type="checkbox" id="recaptcha">
-                                    <label for="recaptcha">I'm not a robot</label>
-                                </div>
+                            <div style="text-align: center;">
+                                <input type="submit" name="btnsubmit" value="Now, I send, thanks!" id="btnsubmit">
                             </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" id="message" placeholder="Your Message..."></textarea>
-                            </div>
+                        </div>
 
-                            <div class="text-center mt-4 fom-btn">
-                                <button>
-                                    <h4>Now, I send thanks</h4>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
         <div class="responsive-border3">
             <img src="img/border5-0.png" alt="">
         </div>
@@ -403,7 +390,27 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="wisdom.js"></script>
+    <script>
+        document.getElementById("ddlsubject").addEventListener("change", function () {
+            var subjectInput = document.getElementById("txtsubject");
+            if (this.value === "Others") {
+                subjectInput.style.display = "block"; // Show the input field
+            } else {
+                subjectInput.style.display = "none"; // Hide it
+            }
+        });
+        const refSelect = document.getElementById('ref');
+        const otherInputRow = document.getElementById('otherInputRow');
+
+        refSelect.addEventListener('change', function () {
+            const selectedValue = refSelect.value;
+            if (selectedValue === 'Others' || selectedValue === 'Looking for some information') {
+                otherInputRow.style.display = 'block';
+            } else {
+             otherInputRow.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
